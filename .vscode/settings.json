@@ -1,5 +1,7 @@
 {
   "python.terminal.activateEnvironment": true,
+  "python.languageServer": "Pylance",
 
-  "python.venvPath": "/home/amirali/Projects/regres/traffic_analysis/traffic_analysis/.venv/bin/python"
+  "python.venvPath": "/home/amirali/Projects/regres/traffic_analysis/traffic_analysis/.venv/bin/python",
+  "cSpell.enabled": false
 }
