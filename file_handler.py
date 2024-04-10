@@ -98,3 +98,10 @@ def getRoadName(city, code):
 
 def getRoadCode():
     pass
+
+def persian_fix(text):
+    return get_display(
+        arabic_reshaper.reshape(
+            u'%s' % str(text)
+        )
+    )
