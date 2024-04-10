@@ -5,7 +5,6 @@ import pandas as pd
 import patoolib
 from bidi.algorithm import get_display
 
-# !!!  replace by you own data path 
 Unrar_data_path = data_folder_path = Original_data_path = "/media/amirali/Data2/Data"
 
 Citys = ["تهران", "قم", "قزوين", "مازندران", "البرز", "اصفهان", "آذربايجان_شرقي", "خراسان_رضوي", "خراسان_شمالي",
@@ -51,7 +50,8 @@ def extract_rar_file(rar_file, year, month):
 
 
 def extract_rar_folder(year, month):
-    rar_files = show_directory_contents_by_year_month(Original_data_path, year, month)
+    rar_files = show_directory_contents_by_year_month(
+        Original_data_path, year, month)
     for item in rar_files:
         extract_rar_file(item, year, month)
 
@@ -84,9 +84,26 @@ def load_csv_file(csv_path):
     return pd.read_excel(csv_path, skiprows=1)
 
 
-def persin_fix(text):
+def persian_fix(text):
     return get_display(
         arabic_reshaper.reshape(
             u'%s' % str(text)
         )
     )
+
+
+def getRoadAddress(year, month, city, code):
+    all = get_dayly_data_path_with_year_month_city(year, month, city)
+    for i in all:
+        if code in i:
+            return i
+    return None
+
+
+
+def getRoadName(city, code):
+    pass
+
+def getRoadCode():
+    pass
+
