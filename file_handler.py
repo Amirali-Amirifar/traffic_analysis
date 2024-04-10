@@ -84,14 +84,6 @@ def load_csv_file(csv_path):
     return pd.read_excel(csv_path, skiprows=1)
 
 
-def persian_fix(text):
-    return get_display(
-        arabic_reshaper.reshape(
-            u'%s' % str(text)
-        )
-    )
-
-
 def getRoadAddress(year, month, city, code):
     all = get_dayly_data_path_with_year_month_city(year, month, city)
     for i in all:
@@ -100,10 +92,9 @@ def getRoadAddress(year, month, city, code):
     return None
 
 
-
 def getRoadName(city, code):
     pass
 
+
 def getRoadCode():
     pass
-
