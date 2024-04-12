@@ -5,7 +5,7 @@ import pandas as pd
 import patoolib
 from bidi.algorithm import get_display
 
-Unrar_data_path = data_folder_path = Original_data_path = "/home/admin/Desktop/Programing project/Jupyter notebook/datasets/Reg_first_Project/Data_unrar"
+Unrar_data_path = data_folder_path = Original_data_path = "/media/amirali/Data2/Data"
 
 Citys = ["تهران", "قم", "قزوين", "مازندران", "البرز", "اصفهان", "آذربايجان شرقي", "خراسان رضوي", "خراسان شمالي",
          "خراسان جنوبي", "استان خوزستان",
