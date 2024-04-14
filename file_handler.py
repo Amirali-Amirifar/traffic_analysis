@@ -5,7 +5,7 @@ import pandas as pd
 import patoolib
 from bidi.algorithm import get_display
 
-Unrar_data_path = data_folder_path = Original_data_path = "/media/amirali/Data2/Data"
+Unrar_data_path = data_folder_path = Original_data_path = "/home/admin/Desktop/Programing project/Jupyter notebook/datasets/Reg_first_Project/Data_unrar"
 
 Citys = ["تهران", "قم", "قزوين", "مازندران", "البرز", "اصفهان", "آذربايجان شرقي", "خراسان رضوي", "خراسان شمالي",
          "خراسان جنوبي", "استان خوزستان",
@@ -14,7 +14,8 @@ Citys = ["تهران", "قم", "قزوين", "مازندران", "البرز", "
          "لرستان", "ايلام", "کهگيلويه و بويراحمد", "سمنان", "اردبيل", "يزد", "بوشهر", "گلستان"]
 Years = ["1395", "1396", "1397", "1398", "1399", "1400", "1401", "1402"]
 Month = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
-
+year = '1395'
+month='1'
 
 def show_directory_contents(directory_path=data_folder_path):
     contents = []
@@ -28,7 +29,7 @@ def show_directory_contents(directory_path=data_folder_path):
     return contents
 
 
-def show_directory_contents_by_year_month(folder_path=data_folder_path, year='1395', month='1'):
+def show_directory_contents_by_year_month(folder_path=data_folder_path, year=year, month=month):
     directory_path = os.path.join(folder_path, year, month)
     contents = []
     try:
